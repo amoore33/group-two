@@ -12,6 +12,4 @@ GFY News is a satirical news site.
 
 ## Link to site
 
-### v0.1
-
-(add link after commit)
+<https://brendanforester.github.io/group-two>
