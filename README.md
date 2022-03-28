@@ -2,7 +2,6 @@
 
 ## Creators
 
-* Brendan Forester
 * TraiShaun Johnson
 * Andrew Moore
 
@@ -12,4 +11,4 @@ GFY News is a satirical news site.
 
 ## Link to site
 
-<https://brendanforester.github.io/group-two>
+<https://amoore33.github.io/group-two/>
