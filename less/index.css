@@ -1,3 +1,4 @@
+@import url("../fontawesome-free-6.1.1-web/css/all.css");
 @font-face {
   font-family: 'Roboto';
   font-style: italic;
@@ -52,21 +53,69 @@ footer {
   padding: 0 10px;
 }
 nav {
-  min-height: 75px;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
   background-color: #333333;
   color: #ffffff;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
 nav .navlist {
-  width: 30%;
-  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  padding-right: 30px;
+  display: none;
+  flex-direction: column;
   justify-content: space-between;
+  align-items: flex-end;
+}
+@media screen and (min-width: 1200px) {
+  nav .navlist {
+    width: 40%;
+  }
+}
+nav .navlist a {
+  font-size: 1.25em;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+nav .hamburger-container {
+  display: initial;
+  font-size: 1.25em;
+  padding-right: 30px;
+}
+nav .hamburger-container #hamburger {
+  cursor: pointer;
 }
 nav a {
   text-decoration: none;
+  text-align: center;
   color: inherit;
+}
+@media screen and (min-width: 700px) {
+  nav {
+    flex-wrap: nowrap;
+  }
+  nav .hamburger-container {
+    display: none;
+  }
+  nav .navlist {
+    margin-top: 0;
+    flex-direction: row;
+    display: flex !important;
+    width: 50%;
+  }
+  nav .navlist a {
+    font-size: 1em;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
 }
 .logo {
   display: flex;
@@ -80,14 +129,64 @@ nav a {
   justify-content: center;
   font-weight: 900;
   font-size: 1.5em;
-  background-color: red;
+  background-color: #ff0000;
   width: 1.25em;
   height: 1.25em;
   margin-right: 5px;
 }
 main {
+  margin-top: 90px;
   padding-top: 10px;
-  min-height: 600px;
   background-color: #ffffff;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.article-box {
+  border: 3px solid #cccccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  animation: fadein 1s ease;
+}
+.article-box .article-box-img {
+  margin-right: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 300px;
+  overflow: hidden;
+}
+.article-box .article-box-img img {
+  width: 100%;
+}
+.article-box .article-box-content {
+  margin-top: 10px;
+}
+.article-box .article-box-content h2 {
+  margin-bottom: 5px;
+}
+@media screen and (min-width: 700px) {
+  .article-box {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .article-box .article-box-img {
+    height: 200px;
+  }
+  .article-box .article-box-img img {
+    width: 100%;
+    height: auto;
+  }
+  .article-box .article-box-content {
+    width: 150%;
+  }
 }
 /*# sourceMappingURL=index.css.map */

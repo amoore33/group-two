@@ -11,20 +11,64 @@ nav, main, footer {
 }
 
 nav {
-  min-height: 75px;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
   background-color: #333333;
   color: #ffffff;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   .navlist {
-    width: 30%;
-    display: flex;
+    width: 100%;
+    @media screen and (min-width: 1200px) {
+      width: 40%;
+    }
+    margin-top: 20px;
+    padding-right: 30px;
+    display: none;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: flex-end;
+    a {
+      font-size: 1.25em;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+  }
+  .hamburger-container {
+    display: initial;
+    font-size: 1.25em;
+    padding-right: 30px;
+    #hamburger {
+      cursor: pointer;
+    }
   }
   a {
     text-decoration: none;
+    text-align: center;
     color: inherit;
+  }
+  @media screen and (min-width: 700px) {
+    flex-wrap: nowrap;
+    .hamburger-container {
+      display: none;
+    }
+    .navlist {
+      margin-top: 0;
+      flex-direction: row;
+      display: flex !important;
+      width: 50%;
+      a {
+        font-size: 1em;
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
@@ -39,7 +83,7 @@ nav {
     justify-content: center;
     font-weight: 900;
     font-size: 1.5em;
-    background-color: red;
+    background-color: #ff0000;
     width: 1.25em;
     height: 1.25em;
     margin-right: 5px;
@@ -47,7 +91,57 @@ nav {
 }
 
 main {
+  margin-top: 90px;
   padding-top: 10px;
-  min-height: 600px;
   background-color: #ffffff;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.article-box{
+  border: 3px solid #cccccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  animation: fadein 1s ease;
+  .article-box-img {
+    margin-right: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 300px;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+  .article-box-content {
+    margin-top: 10px;
+    h2 {
+      margin-bottom: 5px;
+    }
+  }
+  @media screen and (min-width: 700px) {
+    flex-direction: row;
+    align-items: flex-start;
+    .article-box-img {
+      height: 200px;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .article-box-content {
+      width: 150%;
+    }
+  }
 }
