@@ -13,7 +13,7 @@ nav.innerHTML = '\
         <a href="index.html">HOME</a>\
         <a href="">WHAT’S HOT</a>\
         <a href="">POLITICS</a>\
-        <a href="">ABOUT US</a>\
+        <a href="about.html">ABOUT US</a>\
     </div>\
 ';
 

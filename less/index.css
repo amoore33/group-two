@@ -139,6 +139,18 @@ main {
   padding-top: 10px;
   background-color: #ffffff;
 }
+main h1,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6,
+main p {
+  margin-bottom: 10px;
+}
+span.secret {
+  color: #666666;
+}
 @keyframes fadein {
   0% {
     opacity: 0;
