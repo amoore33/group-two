@@ -17,5 +17,5 @@
     "postversion": "git push && git push --tags",
     "prepublish": "npm test && npm run build",
     "dependencies": {
-    "handlebars": "^4.7.6"
+    "handlebars": "^4.7.6",
   }
