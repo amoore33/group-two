@@ -16,7 +16,6 @@ nav.innerHTML = '\
         <a href="">ABOUT US</a>\
     </div>\
 ';
-
 let menuOpen = false;
 let hamburger = document.querySelector("#hamburger");
 hamburger.addEventListener("click", function() {
