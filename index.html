@@ -2,10 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>GFY NEWS</title>
+    <title>Home | GFY News</title>
+    <link rel="stylesheet" href="less/index.css">
 </head>
 <body>
+<nav id="nav">
+</nav>
+<main>
     <h1>Welcome to GFY News</h1>
-    <img src="assets/construction.gif"/>
+    <div class="article-box">
+        <div class="article-box-img">
+            <img src="assets/gambling.jpg" alt="Blackjack table">
+        </div>
+        <div class="article-box-content">
+            <h2>Local entrepreneur blows inheritance on gambling</h2>
+            <p>Apparently, Daddy&rsquo;s money wasn&rsquo;t enough for him.</p>
+        </div>
+    </div>
+    <div class="article-box">
+        <div class="article-box-img">
+            <img src="assets/cntower.jpg" alt="CN Tower">
+        </div>
+        <div class="article-box-content">
+            <h2>BREAKING: CN Tower still standing, somehow</h2>
+            <p>Nothing happened to it or anything; it&rsquo;s just incredible how it&rsquo;s managed to stay there this long.</p>
+        </div>
+    </div>
+    <div class="article-box">
+        <div class="article-box-img">
+            <img src="assets/brain.jpg" alt="Brain">
+        </div>
+        <div class="article-box-content">
+            <h2>We found the guy who keeps saying it can&rsquo;t get any worse</h2>
+            <p>And we&rsquo;re going to kill him. It&rsquo;s the only way to break the curse.</p>
+        </div>
+    </div>
+</main>
+<script src="js/app.js"></script>
+<script>
+   let tags =  -{
+        "name": "group-two",
+        "version": "1.0.0",
+        "main": ".lib/server/all.js",
+        "files": [
+            "lib",
+            "public"
+        ],
+        "scripts": {
+            "prepare": "GFY",
+            "test": "npm run build && cross-env NODE_ENV=test jest && npm run lint",
+            "start": "babel-node -- src/cli/bin db.json -r routes.json",
+            "lint": "eslint . --ignore-path .gitignore",
+            "fix": "npm run lint -- --fix",
+            "build": "babel src -d lib",
+            "toc": "markdown-toc -i README.md",
+            "postversion": "git push && git push --tags",
+            "prepublish": "npm test && npm run build",
+            "dependencies": {
+                "handlebars": "^4.7.6",
+            }
+console.log(tags)
+</script>
 </body>
 </html>

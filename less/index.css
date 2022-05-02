@@ -1,0 +1,204 @@
+@import url("../fontawesome-free-6.1.1-web/css/all.css");
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOkCnqEu92Fr1Mu52xP.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOjCnqEu92Fr1Mu51TzBhc9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOjCnqEu92Fr1Mu51TLBBc9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Me5Q.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmWUlvAw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmYUtvAw.ttf) format('truetype');
+}
+* {
+  margin: 0;
+}
+body {
+  font-family: Roboto, sans-serif;
+}
+nav,
+main,
+footer {
+  padding: 0 10px;
+}
+nav {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333333;
+  color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .navlist {
+  width: 100%;
+  margin-top: 20px;
+  padding-right: 30px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+@media screen and (min-width: 1200px) {
+  nav .navlist {
+    width: 40%;
+  }
+}
+nav .navlist a {
+  font-size: 1.25em;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+nav .hamburger-container {
+  display: initial;
+  font-size: 1.25em;
+  padding-right: 30px;
+}
+nav .hamburger-container #hamburger {
+  cursor: pointer;
+}
+nav a {
+  text-decoration: none;
+  text-align: center;
+  color: inherit;
+}
+@media screen and (min-width: 700px) {
+  nav {
+    flex-wrap: nowrap;
+  }
+  nav .hamburger-container {
+    display: none;
+  }
+  nav .navlist {
+    margin-top: 0;
+    flex-direction: row;
+    display: flex !important;
+    width: 50%;
+  }
+  nav .navlist a {
+    font-size: 1em;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+}
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+.logo .redbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1.5em;
+  background-color: #ff0000;
+  width: 1.25em;
+  height: 1.25em;
+  margin-right: 5px;
+}
+main {
+  margin-top: 90px;
+  padding-top: 10px;
+  background-color: #ffffff;
+}
+main h1,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6,
+main p {
+  margin-bottom: 10px;
+}
+span.secret {
+  color: #666666;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.article-box {
+  border: 3px solid #cccccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  animation: fadein 1s ease;
+}
+.article-box .article-box-img {
+  margin-right: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 300px;
+  overflow: hidden;
+}
+.article-box .article-box-img img {
+  width: 100%;
+}
+.article-box .article-box-content {
+  margin-top: 10px;
+}
+.article-box .article-box-content h2 {
+  margin-bottom: 5px;
+}
+@media screen and (min-width: 700px) {
+  .article-box {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .article-box .article-box-img {
+    height: 200px;
+  }
+  .article-box .article-box-img img {
+    width: 100%;
+    height: auto;
+  }
+  .article-box .article-box-content {
+    width: 150%;
+  }
+}
+/*# sourceMappingURL=index.css.map */
